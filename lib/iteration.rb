@@ -13,16 +13,27 @@ def join_ingredients(src)
 # end
 
 
-  row_index = 0
-  while row_index < src.count do
-    element_index = 0
-    while element_index < src[row_index].count do
-      result << "I love #{element_index[0]} and #{element_index[1]} on my pizza"
-      element_index += 1
-    end
-    row_index += 1
+row_index = 0
+while row_index < src.count do
+  element_index = 0
+  while element_index < src[row_index].count do
+    result << "I love #{src[row_index][element_index][0]} and #{src[row_index][element_index][1]} on my pizza"
+    element_index += 1
   end
+  row_index += 1
 end
+end
+
+#   row_index = 0
+#   while row_index < src.count do
+#     element_index = 0
+#     while element_index < src[row_index].count do
+#       result << "I love #{src[row_index][element_index][0]} and #{src[row_index][element_index][1]} on my pizza"
+#       element_index += 1
+#     end
+#     row_index += 1
+#   end
+# end
 
   # Given an Array of 2-element Arrays ( [ [food1, food2], [food3, # food4]....[foodN, foodM]]):
   # Build a new Array that contains strings where each pair of foods is
